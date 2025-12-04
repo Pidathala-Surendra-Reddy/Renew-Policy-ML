@@ -1,5 +1,19 @@
 # 🏆 Renew-Policy-ML
 
+---
+
+## 📂 Folder Structure
+```
+📦 Renew-Policy-ML
+├── insurance_renewal_prediction.py   # 🖥️ Main Analysis & ML Pipeline
+├── train.csv                         # 📥 Training Data
+├── test.csv                          # 📥 Test Data (Used for Final Predictions)
+├── submission.csv                    # 📤 Final Mapped Output File
+└── requirements.txt                  # 📋 Project Dependencies
+```
+
+---
+
 ## 📑 Problem Statement & Goal🚀:
 Overview / Problem Statement:  Insurance companies rely heavily on policy renewals for long-term revenue and customer retention. This project focuses on developing a robust machine learning model to predict whether an existing customer will renew their insurance policy.
 
@@ -143,17 +157,6 @@ pip install -r requirements.txt
 Bash
 python insurance_renewal_prediction.py
 
----
-
-## 📂 Folder Structure
-```
-📦 Renew-Policy-ML
-├── insurance_renewal_prediction.py   # 🖥️ Main Analysis & ML Pipeline
-├── train.csv                         # 📥 Training Data
-├── test.csv                          # 📥 Test Data (Used for Final Predictions)
-├── submission.csv                    # 📤 Final Mapped Output File
-└── requirements.txt                  # 📋 Project Dependencies
-```
 ---
 
 ## 🛠️ Requirements
