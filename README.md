@@ -8,7 +8,9 @@ This is a Binary Classification task:
 -> Target = 0: Customer WILL NOT renew the policy.
 
 **Goal**: Develop a model to predict the binary outcome of policy renewal.
+
 ---
+
 ##  💾 Dataset Structure:
 The project utilizes customer-level data containing demographic, policy, and behavioral features of policyholders.
 
@@ -49,6 +51,7 @@ The initial analysis was crucial for defining the preprocessing strategy, focusi
 
 • **Redundant Feature Identification**: Multiple columns providing similar information were identified: (age_in_days, age) and (Income, income).
 
+---
 
 ## 🧹 Data Preprocessing & Feature Engineering 🛠️
 
@@ -60,6 +63,7 @@ The initial analysis was crucial for defining the preprocessing strategy, focusi
 | **Categorical Encoding** | **labelEncoding** | Converted nominal features (e.g., `occupation`, `sourcing_channel`,'occupation_type') into model-readable format. |
 | **Data Imbalance** | **SMOTE** (Synthetic Minority Over-sampling Technique) | Used on the training set to balance the target classes, ensuring models do not bias towards the majority (renewal) class. |
 
+---
 
 ## ✅ ML/DL Models Used 🧠
 
@@ -73,6 +77,8 @@ A suite of diverse and powerful classification algorithms was implemented to ens
 | **Gradient Boosting** | Ensemble (Boosting) | Strong sequential learner. |
 | **SVC** | Kernel-based (Non-Linear) | Included for complex boundary exploration. |
 
+---
+
 ## 📊 Model Training & Evaluation 📈
 Data Split: 80% Training (SMOTE-processed) and 20% Validation (Original Distribution).
 ### Model Performance Summary
@@ -83,6 +89,8 @@ Data Split: 80% Training (SMOTE-processed) and 20% Validation (Original Distribu
 | **Random Forest** | Accuracy: **0.9337**, F1 (Class 0): **0.2740**, Recall (Class 0): **0.2151** | Highest **Recall** for Class 0 → best at identifying **non-renewal** cases. |
 | **XGBoost Classifier** | Accuracy: **0.9400**, F1 (Class 0): **0.0769**, Recall (Class 0): **0.0430** | Highest **overall accuracy**, but **poor minority class detection**, showing bias toward Class 1. |
 
+---
+
 ### Prediction Distribution Summary
   The three optimized tree-based models were applied to the unseen, preprocessed test set (X_test). The test set intentionally lacks the target column, so evaluation metrics are not computed, but the class distribution of predictions is crucial.
 | Model | Prediction Insight | Key Interpretation |
@@ -90,6 +98,8 @@ Data Split: 80% Training (SMOTE-processed) and 20% Validation (Original Distribu
 | **Random Forest** | Non-Renewal: **263**, Renewal: **1,737**, Total: **2,000** | Highest number of **non-renewal predictions**, matching its strong Recall for Class 0. |
 | **Gradient Boosting** | Non-Renewal: **220**, Renewal: **1,780**, Total: **2,000** | More **balanced predictions**, aligned with its best F1-score for Class 0. |
 | **XGBoost Classifier** | Non-Renewal: **15**, Renewal: **1,985**, Total: **2,000** | Strong **majority-class bias**; almost always predicts Renewal, matching its low Class 0 Recall. |
+
+---
 
 ##  📤 Submission File Generation & Mapping 🏷️
 The critical final stage involves applying the best model to the unseen test data and creating the submission file using the separated identifiers.
@@ -104,11 +114,15 @@ The critical final stage involves applying the best model to the unseen test dat
 
 **Final Output**: A CSV file mapping the original unique_id to the model's predicted renewal outcome.
 
+---
+
 ## 🖼️ Visualization Highlights
 Key visualizations ensured transparency and explainability:
 **Correlation Heatmaps:** Visualized feature interdependence post-encoding.
 **Distribution Plots:** Showcased the shift in target distribution after SMOTE application.
 **Bivariate Analysis:** Count plots detailed the relationship between various occupation and sourcing_channel groups and the renewal rate.
+
+---
 
 ## ▶️ How to Run the Code
 
@@ -126,6 +140,8 @@ pip install -r requirements.txt
 Bash
 python insurance_renewal_prediction.py
 
+---
+
 ## 📂 Folder Structure
 
 ├── insurance_renewal_prediction.py  # 🖥️ Main Analysis & ML Pipeline
@@ -134,6 +150,7 @@ python insurance_renewal_prediction.py
 ├── submission.csv                   # 📤 Final Mapped Output File
 └── requirements.txt                 # 📋 Project Dependencies
 
+---
 
 ## 🛠️ Requirements
 Install all necessary packages using the requirements.txt (or manually):
@@ -147,6 +164,8 @@ matplotlib
 xgboost
 imbalanced-learn
 Smote
+
+---
 
 ## 💡 Future Improvements
 **->Advanced Hyperparameter Tuning:** Implement Optuna hyperparamter-tuning on XGBoost for production-level optimization.
