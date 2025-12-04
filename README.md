@@ -105,7 +105,7 @@ Data Split: 80% Training (SMOTE-processed) and 20% Validation (Original Distribu
 
 ---
 
-### Prediction Distribution Summary
+## 🎯Prediction Distribution Summary
   The three optimized tree-based models were applied to the unseen, preprocessed test set (X_test). The test set intentionally lacks the target column, so evaluation metrics are not computed, but the class distribution of predictions is crucial.
 | Model | Prediction Insight | Key Interpretation |
 | :--- | :--- | :--- |
