@@ -118,8 +118,11 @@ The critical final stage involves applying the best model to the unseen test dat
 
 ## 🖼️ Visualization Highlights
 Key visualizations ensured transparency and explainability:
+
 **• Correlation Heatmaps:** Visualized feature interdependence post-encoding.
+
 **• Distribution Plots:** Showcased the shift in target distribution after SMOTE application.
+
 **• Bivariate Analysis:** Count plots detailed the relationship between various occupation and sourcing_channel groups and the renewal rate.
 
 ---
@@ -143,19 +146,19 @@ python insurance_renewal_prediction.py
 ---
 
 ## 📂 Folder Structure
-
+```
 📦 Renew-Policy-ML
 ├── insurance_renewal_prediction.py   # 🖥️ Main Analysis & ML Pipeline
 ├── train.csv                         # 📥 Training Data
 ├── test.csv                          # 📥 Test Data (Used for Final Predictions)
 ├── submission.csv                    # 📤 Final Mapped Output File
 └── requirements.txt                  # 📋 Project Dependencies
-
+```
 ---
 
 ## 🛠️ Requirements
 Install all necessary packages using the requirements.txt (or manually):
-
+```
 Bash
 pandas
 numpy
@@ -165,7 +168,7 @@ matplotlib
 xgboost
 imbalanced-learn
 Smote
-
+```
 ---
 
 ## 💡 Future Improvements
