@@ -1,5 +1,5 @@
 # 🏆 Renew-Policy-ML
----
+
 ## 📑 Problem Statement & Goal🚀:
 Overview / Problem Statement:  Insurance companies rely heavily on policy renewals for long-term revenue and customer retention. This project focuses on developing a robust machine learning model to predict whether an existing customer will renew their insurance policy.
 
@@ -8,7 +8,7 @@ This is a Binary Classification task:
 -> Target = 0: Customer WILL NOT renew the policy.
 
 **Goal**: Develop a model to predict the binary outcome of policy renewal.
-
+---
 ##  💾 Dataset Structure:
 The project utilizes customer-level data containing demographic, policy, and behavioral features of policyholders.
 
@@ -29,6 +29,8 @@ The columns in the training set and testing set are composed of the following da
 | **Redundant/Correlated** | 2 | `age_in_days`, `Income` | **Dropped** due to correlation with `age` and `income`. |
 | **Identifier** | 2 | `unique_id`, `name` | **Separated** (`unique_id`) or **Dropped** (`name`). |
 | **Target Column** | 1 | `target` (Binary: 0 or 1) | **Predictive Goal.** |
+
+----
 
 ## 🔍 Exploratory Data Analysis (EDA) Insights
 The initial analysis was crucial for defining the preprocessing strategy, focusing on data quality, distribution, and feature utility:
